@@ -4,7 +4,7 @@ This python program takes a reference FASTA file (with one or multiple features)
 
 In addition to the output FASTA file, the sampler also generates a 'counts' file which provides a count of the total sampled sequences per feature in the input FASTA; as well as an 'info' file with sequence lengths and GC contents of all sampled sequences.  
 
-Prior to using the script, ensure that the input FASTA file has no newlines within the features. Use the following command in bash to generate a new input file if there are any :
+Prior to using the script, ensure that the input FASTA file has no newlines within the features. Use the following command in bash to generate a new input file if there are any :\
 `awk '/^>/ {printf("\n%s\n",$0);next; } { printf("%s",$0);}  END {printf("\n");}' < file.fa > out.fa `
 
 Usage example:\
